@@ -1,0 +1,6 @@
+export enum EnrollmentStatus {
+  ACTIVE = 'ACTIVE',
+  PENDING_PAYMENT = 'PENDING_PAYMENT',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
+}

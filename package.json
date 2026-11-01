@@ -1,0 +1,19 @@
+{
+  "name": "ocms-root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "concurrently --kill-others -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm run --prefix backend start:prod\" \"npm run --prefix frontend start\"",
+    "dev:backend": "npm run --prefix backend dev",
+    "dev:frontend": "npm run --prefix frontend dev",
+    "migration:run": "npm run --prefix backend migration:run",
+    "seed:admin": "npm run --prefix backend seed:admin",
+    "seed:demo": "npm run --prefix backend seed:demo",
+    "test:backend": "npm run --prefix backend test",
+    "test:e2e": "npm run --prefix backend test:e2e",
+    "lint:backend": "npm run --prefix backend lint"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
